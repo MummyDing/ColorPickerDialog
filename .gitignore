@@ -30,3 +30,10 @@ proguard/
 
 # Android Studio captures folder
 captures/
+
+# Swap Files
+*~
+
+# Android Studio workspace.xml file
+workspace.xml
+.idea/workspace.xml
