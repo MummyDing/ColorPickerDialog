@@ -13,15 +13,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         ColorPickerDialog dialog = new ColorPickerDialog(this,new int[]{Color.YELLOW
-                ,Color.BLACK,Color.BLUE,Color.GRAY,Color.GREEN,Color.CYAN,Color.RED,Color.DKGRAY});
-
-        dialog.setOnColorChangedListener(new OnColorChangedListener() {
+                ,Color.BLACK,Color.BLUE,Color.GRAY,Color.GREEN,Color.CYAN,Color.RED,Color.DKGRAY,
+                Color.WHITE,Color.LTGRAY,Color.MAGENTA,Color.TRANSPARENT
+        }).setOnColorChangedListener(new OnColorChangedListener() {
             @Override
             public void onColorChanged(int newColor) {
                 Toast.makeText(getApplicationContext(),"Color "+newColor,Toast.LENGTH_SHORT).show();
             }
-        });
-        dialog.build(6).show();
-        dialog.setCheckedColor(Color.YELLOW);
+        }).setDismissAfterClick(false).build(5).show()
+          .setCheckedColor(Color.WHITE);
     }
 }

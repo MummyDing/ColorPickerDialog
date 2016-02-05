@@ -2,7 +2,6 @@ package com.github.mummyding.colorpickerdialog;
 
 import android.app.AlertDialog;
 import android.content.Context;
-import android.graphics.Color;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
@@ -78,24 +77,6 @@ public class ColorPickerDialog implements View.OnClickListener{
         setCheckedColor(checkedColor);
     }
 
-    @Override
-    public void onClick(View v) {
-        if(listener != null){
-            ColorButton colorButton = (ColorButton) v;
-            if(colorButton.isChecked() == false){
-                if(currentButton != null){
-                    currentButton.setChecked(false);
-                }
-                colorButton.setChecked(true);
-                listener.onColorChanged(colorButton.getmColor());
-                currentButton = colorButton;
-                if(isDismissAfterClick && dialog != null){
-                    dialog.dismiss();
-                }
-            }
-        }
-    }
-
 
     public ColorPickerDialog build(){
         return build(4);
@@ -135,13 +116,14 @@ public class ColorPickerDialog implements View.OnClickListener{
             LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.MATCH_PARENT);
             lp.setMargins(0,0,defaultPadding,0);
             linearLayouts[i/widthCount].addView(colorButton,lp);
+            colorButtonList.add(colorButton);
         }
 
         return this;
     }
 
 
-    public void show(){
+    public ColorPickerDialog show(){
         if(rootLayout == null){
             throw new UnsupportedOperationException("you must call build before show");
         }
@@ -153,12 +135,30 @@ public class ColorPickerDialog implements View.OnClickListener{
         dialog.setView(rootLayout);
         dialog.show();
         dialog.getWindow().setLayout((DisplayUtil.dip2px(mContext,30)+defaultPadding)*colCount+defaultPadding*3,DisplayUtil.dip2px(mContext,100+30*rowCount)+defaultPadding*rowCount);
+        return this;
     }
 
-    public void setCheckedColor(int color){
 
+    @Override
+    public void onClick(View v) {
+        if(listener != null){
+            ColorButton colorButton = (ColorButton) v;
+            if(colorButton.isChecked() == false){
+                if(currentButton != null){
+                    currentButton.setChecked(false);
+                }
+                colorButton.setChecked(true);
+                listener.onColorChanged(colorButton.getmColor());
+                currentButton = colorButton;
+                if(isDismissAfterClick && dialog != null){
+                    dialog.dismiss();
+                }
+            }
+        }
+    }
+    public ColorPickerDialog setCheckedColor(int color){
         if(currentButton != null && color == currentButton.getmColor()){
-            return;
+            return this;
         }
         for(ColorButton colorButton: colorButtonList){
             if(color == colorButton.getmColor()){
@@ -170,14 +170,17 @@ public class ColorPickerDialog implements View.OnClickListener{
                 currentButton = colorButton;
             }
         }
+        return this;
     }
 
-    public void setOnColorChangedListener(OnColorChangedListener listener) {
+    public ColorPickerDialog setOnColorChangedListener(OnColorChangedListener listener) {
         this.listener = listener;
+        return this;
     }
 
-    public void setTitle(String title) {
+    public ColorPickerDialog setTitle(String title) {
         this.title = title;
+        return this;
     }
 
     public String getTitle() {
@@ -188,7 +191,8 @@ public class ColorPickerDialog implements View.OnClickListener{
         return isDismissAfterClick;
     }
 
-    public void setDismissAfterClick(Boolean dismissAfterClick) {
+    public ColorPickerDialog setDismissAfterClick(Boolean dismissAfterClick) {
         isDismissAfterClick = dismissAfterClick;
+        return this;
     }
 }
