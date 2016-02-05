@@ -7,7 +7,6 @@ import android.graphics.Paint;
 import android.graphics.Point;
 import android.util.AttributeSet;
 import android.view.View;
-import android.widget.HorizontalScrollView;
 
 /**
  * Created by MummyDing on 16-2-4.
@@ -60,7 +59,7 @@ public class ColorButton extends View {
      * set size to defaultWidth if user has not specified
      * unit: dip
      */
-    private int defaultWidth = 20;
+    private int defaultWidth = 30;
 
 
     public ColorButton(Context context, int color) {
@@ -69,7 +68,7 @@ public class ColorButton extends View {
         mColor = color;
         mPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
         mPaint.setStrokeWidth(5);
-        defaultWidth = dip2px(defaultWidth);
+        defaultWidth = DisplayUtil.dip2px(mContext,defaultWidth);
     }
 
     public ColorButton(Context context) {
@@ -81,7 +80,7 @@ public class ColorButton extends View {
         mContext = context;
         mPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
         mPaint.setStrokeWidth(5);
-        defaultWidth = dip2px(defaultWidth);
+        defaultWidth = DisplayUtil.dip2px(mContext,defaultWidth);
     }
 
     public ColorButton(Context context, AttributeSet attrs, int defStyleAttr) {
@@ -89,7 +88,7 @@ public class ColorButton extends View {
         mContext = context;
         mPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
         mPaint.setStrokeWidth(5);
-        defaultWidth = dip2px(defaultWidth);
+        defaultWidth = DisplayUtil.dip2px(mContext,defaultWidth);
     }
 
     /**
@@ -130,9 +129,9 @@ public class ColorButton extends View {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
         drawCircle(canvas);
-       // if(isChecked()){
+        if(isChecked()){
             drawCheck(canvas);
-        //}
+        }
     }
 
     private void drawCircle(Canvas canvas){
@@ -160,10 +159,11 @@ public class ColorButton extends View {
 
     public void setChecked(boolean checked) {
         isChecked = checked;
+        invalidate();
     }
 
-    public  int dip2px(float dpValue) {
-        final float scale = mContext.getResources().getDisplayMetrics().density;
-        return (int) (dpValue * scale + 0.5f);
+
+    public int getmColor() {
+        return mColor;
     }
 }
