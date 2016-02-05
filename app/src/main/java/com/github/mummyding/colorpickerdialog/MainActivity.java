@@ -19,10 +19,11 @@ public class MainActivity extends AppCompatActivity {
                 Color.rgb(89,23,200),Color.rgb(13,222,23), Color.rgb(222,22,2),Color.rgb(2,22,222)};
 
 
-        /*ColorPickerDialog dialog =
+        ColorPickerDialog dialog =
                 // Constructor,the first argv is Context,second one is the colors you want to add
                 new ColorPickerDialog(this,colors)
-                // Optional, if you want the dialog dismissed after picking,set it to true,otherwise false. default true
+                // Optional, if you want the dialog dismissed after picking,set it to true,otherwise
+                 // false. default true
                 .setDismissAfterClick(false)
                  // Optional, Dialog's title,default "Theme"
                 .setTitle("Custom Theme")
@@ -34,20 +35,21 @@ public class MainActivity extends AppCompatActivity {
                         // do something here
                         Toast.makeText(getApplicationContext(),"Color "+newColor,Toast.LENGTH_SHORT).show();
                     }})
-                 // build Dialog,argv means width count of Dialog,default value is 4 if you use build() without argv
+                 // build Dialog,argv means width count of Dialog,default value is 4 if you use build()
+                        // without argv
                 .build(6)
-                .show();*/
-        ColorPickerDialog dialog =
+                .show();
+       /* ColorPickerDialog dialog =
                 // Constructor,the first argv is Context,second one is the colors you want to add
                 new ColorPickerDialog(this,colors)
                         .setOnColorChangedListener(new OnColorChangedListener() {
                             @Override
                             public void onColorChanged(int newColor) {
                                 // do something here
-                                Toast.makeText(getApplicationContext(),"Color "+newColor,Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getBaseContext(),"Color "+newColor,Toast.LENGTH_SHORT).show();
                             }})
                         .build()
-                        .show();
+                        .show();*/
 
 
     }

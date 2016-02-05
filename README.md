@@ -15,10 +15,11 @@ A custom Dialog using for picking color.
 - Create Demo
 
 ```java
-        ColorPickerDialog dialog =
+ ColorPickerDialog dialog =
                 // Constructor,the first argv is Context,second one is the colors you want to add
                 new ColorPickerDialog(this,colors)
-                // Optional, if you want the dialog dismissed after picking,set it to true,otherwise false. default true
+                // Optional, if you want the dialog dismissed after picking,set it to true,otherwise
+                 // false. default true
                 .setDismissAfterClick(false)
                  // Optional, Dialog's title,default "Theme"
                 .setTitle("Custom Theme")
@@ -30,13 +31,14 @@ A custom Dialog using for picking color.
                         // do something here
                         Toast.makeText(getApplicationContext(),"Color "+newColor,Toast.LENGTH_SHORT).show();
                     }})
-                 // build Dialog,argv means width count of Dialog,default value is 4 if you use build() without argv
+                 // build Dialog,argv means width count of Dialog,default value is 4 if you use build() 
+                        // without argv
                 .build(6)
                 .show();
 
 ```
 
--Simple Usage
+- Simple Usage
 ```java
 ColorPickerDialog dialog =
                 // Constructor,the first argv is Context,second one is the colors you want to add
