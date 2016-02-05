@@ -139,7 +139,7 @@ public class ColorButton extends View {
         canvas.drawCircle(paddingHorizontal + width/2,paddingVertical + height/2,mRadius,mPaint);
     }
     private void drawCheck(Canvas canvas){
-        if(mColor == Color.WHITE){
+        if(-40 <mColor && mColor< 40){
             mPaint.setColor(Color.BLACK);
         }else {
             mPaint.setColor(Color.WHITE);
