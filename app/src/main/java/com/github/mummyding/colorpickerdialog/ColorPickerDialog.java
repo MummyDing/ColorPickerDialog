@@ -42,10 +42,17 @@ public class ColorPickerDialog implements View.OnClickListener{
      */
     private ColorButton currentButton;
 
+    private AlertDialog dialog;
     /**
      * Dialog Title,default "Theme"
      */
     private String title = "Theme";
+
+    /**
+     * if you want the dialog dismissed after picking,set it to true,otherwise false.
+     * default true
+     */
+    private Boolean isDismissAfterClick = true;
 
     private LinearLayout rootLayout;
 
@@ -82,6 +89,9 @@ public class ColorPickerDialog implements View.OnClickListener{
                 colorButton.setChecked(true);
                 listener.onColorChanged(colorButton.getmColor());
                 currentButton = colorButton;
+                if(isDismissAfterClick && dialog != null){
+                    dialog.dismiss();
+                }
             }
         }
     }
@@ -137,7 +147,7 @@ public class ColorPickerDialog implements View.OnClickListener{
         }
 
         AlertDialog.Builder builder = new AlertDialog.Builder(mContext);
-        AlertDialog dialog = builder.create();
+        dialog = builder.create();
         dialog.setTitle(getTitle());
         dialog.setIcon(R.drawable.ic_theme_black);
         dialog.setView(rootLayout);
@@ -172,5 +182,13 @@ public class ColorPickerDialog implements View.OnClickListener{
 
     public String getTitle() {
         return title;
+    }
+
+    public Boolean getDismissAfterClick() {
+        return isDismissAfterClick;
+    }
+
+    public void setDismissAfterClick(Boolean dismissAfterClick) {
+        isDismissAfterClick = dismissAfterClick;
     }
 }
