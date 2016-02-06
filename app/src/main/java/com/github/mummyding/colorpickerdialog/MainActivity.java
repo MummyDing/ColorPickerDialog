@@ -39,17 +39,6 @@ public class MainActivity extends AppCompatActivity {
                         // without argv
                 .build(6)
                 .show();
-       /* ColorPickerDialog dialog =
-                // Constructor,the first argv is Context,second one is the colors you want to add
-                new ColorPickerDialog(this,colors)
-                        .setOnColorChangedListener(new OnColorChangedListener() {
-                            @Override
-                            public void onColorChanged(int newColor) {
-                                // do something here
-                                Toast.makeText(getBaseContext(),"Color "+newColor,Toast.LENGTH_SHORT).show();
-                            }})
-                        .build()
-                        .show();*/
 
 
     }

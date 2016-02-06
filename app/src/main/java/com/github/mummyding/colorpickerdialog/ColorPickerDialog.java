@@ -1,7 +1,7 @@
 package com.github.mummyding.colorpickerdialog;
 
-import android.app.AlertDialog;
 import android.content.Context;
+import android.support.v7.app.AlertDialog;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
@@ -131,7 +131,7 @@ public class ColorPickerDialog implements View.OnClickListener{
         AlertDialog.Builder builder = new AlertDialog.Builder(mContext);
         dialog = builder.create();
         dialog.setTitle(getTitle());
-        dialog.setIcon(R.drawable.ic_theme_black);
+        dialog.setIcon(R.mipmap.ic_theme_black);
         dialog.setView(rootLayout);
         dialog.show();
         dialog.getWindow().setLayout((DisplayUtil.dip2px(mContext,30)+defaultPadding)*colCount+defaultPadding*3,DisplayUtil.dip2px(mContext,100+30*rowCount)+defaultPadding*rowCount);
