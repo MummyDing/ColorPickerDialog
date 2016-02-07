@@ -1,5 +1,8 @@
-# ColorPickerDialog
-A custom Dialog using for picking color.
+# ColorPickerDialog   [![alt text](https://bintray.com/assets/default-maven-7599dcf1a061edd8074ded515b2b3225.png "ColorPickerDialog")](https://bintray.com/mummyding/maven/ColorPickerDialog/view)   
+
+A custom Dialog using for color picking.
+
+<img src="/ScreenShots/img3.png"/> 
 
 
 #Download
