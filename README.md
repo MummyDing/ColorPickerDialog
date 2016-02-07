@@ -14,7 +14,7 @@ dependencies {
 
 - Download Directly
 
-[colorpickerdialog-1.0.0.aar][https://dl.bintray.com/mummyding/maven/com/mummyding/view/colorpickerdialog/1.0.0/colorpickerdialog-1.0.0.aar]
+[colorpickerdialog-1.0.0.aar](https://dl.bintray.com/mummyding/maven/com/mummyding/view/colorpickerdialog/1.0.0/colorpickerdialog-1.0.0.aar)
 
 
 #Usage
