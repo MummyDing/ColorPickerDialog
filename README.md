@@ -1,11 +1,11 @@
-# ColorPickerDialog   [![alt text](https://bintray.com/assets/default-maven-7599dcf1a061edd8074ded515b2b3225.png "ColorPickerDialog")](https://bintray.com/mummyding/maven/ColorPickerDialog/view)   
+# ColorPickerDialog    *[JCenter](https://bintray.com/mummyding/maven/ColorPickerDialog/view)*   
 
-A custom Dialog using for color picking.
+A custom Dialog using for color picking.(Android Ice Cream Sandwich:API level 14)   
 
 <img src="/ScreenShots/img3.png"/> 
 
 
-#Download
+##Download
 
 - Gradle:
 
@@ -20,7 +20,7 @@ dependencies {
 [colorpickerdialog-1.0.0.aar](https://dl.bintray.com/mummyding/maven/com/mummyding/view/colorpickerdialog/1.0.0/colorpickerdialog-1.0.0.aar)
 
 
-#Usage
+##Usage
 
 - Baisc Data
 
@@ -72,7 +72,7 @@ ColorPickerDialog dialog =
                         .show();
 ```
 
-#Screenshots
+##Screenshots
 
 <img src="/ScreenShots/img1.png"/> 
 <img src="/ScreenShots/img2.png"/> 
