@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="colorpickerdialog-1.0.0">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.mummyding.view/colorpickerdialog/1.0.0/res" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.mummyding.view/colorpickerdialog/1.0.0/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.mummyding.view/colorpickerdialog/1.0.0/dd9aeb71c5b13d6a72f37146cbc75a2888864cbe/colorpickerdialog-1.0.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

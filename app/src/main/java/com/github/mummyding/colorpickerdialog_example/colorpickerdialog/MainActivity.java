@@ -1,9 +1,12 @@
-package com.github.mummyding.colorpickerdialog;
+package com.github.mummyding.colorpickerdialog_example.colorpickerdialog;
 
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Toast;
+
+import com.github.mummyding.colorpickerdialog.ColorPickerDialog;
+import com.github.mummyding.colorpickerdialog.OnColorChangedListener;
 
 public class MainActivity extends AppCompatActivity {
 

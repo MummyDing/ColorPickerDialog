@@ -1,6 +1,22 @@
 # ColorPickerDialog
 A custom Dialog using for picking color.
 
+
+#Download
+
+- Gradle:
+
+```java
+dependencies {
+    compile 'com.mummyding.view:colorpickerdialog:1.0.0'
+}
+```
+
+- Download Directly
+
+[colorpickerdialog-1.0.0.aar][https://dl.bintray.com/mummyding/maven/com/mummyding/view/colorpickerdialog/1.0.0/colorpickerdialog-1.0.0.aar]
+
+
 #Usage
 
 - Baisc Data
